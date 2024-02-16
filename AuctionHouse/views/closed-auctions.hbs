@@ -1,0 +1,35 @@
+<!-- Closed Auctions Page -->
+<section id="catalog-section" class="spaced">
+
+    <h1 class="item">Closed Auctions</h1>
+
+    <!-- List of closed auctions for the current user -->
+    {{#if items}}
+    <ul class="catalog cards">
+        {{#each items}}
+        <li class="item">
+            <header class="pad-med">
+                <h2>{{title}}</h2>
+            </header>
+
+            <div class="align-center">
+
+                <img class="img-thumb" src="{{imgUrl}}">
+
+            </div>
+
+            <footer class="align-center pad-med">
+                <p>Closing price: <strong>${{price}}</strong></p>
+                from {{bider.firstname}} {{bider.lastname}}
+            </footer>
+        </li>
+        {{/each}}
+    </ul>
+
+    <!-- If the current user doesn't have closed auctions --->
+    {{else}}
+    <div class="item pad-large align-center">
+        <p>You haven't closed any auctions yet.</p>
+    </div>
+    {{/if}}
+</section>

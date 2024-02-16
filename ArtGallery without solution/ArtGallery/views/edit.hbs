@@ -1,0 +1,26 @@
+<section id="edit-container">
+    <div class="edit-container-info">
+        <!-- Do not forget to change the path to the image -->
+        <img src="/style/img/blog-img12.jpg" alt="image">
+
+        <form  method="post" class="container-text">
+            <h2>Edit</h2>
+            <p>Edit your masterpiece!</p>
+             {{#with item}}
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" value="{{title}}">
+
+            <label for="painting-tech">Painting technique:</label>
+            <input type="text" id="painting-tech" name="paintingTech" value="{{paintingTech}}">
+
+            <label for="picture">Art picture:</label>
+            <input type="text" id="picture" name="imgUrl" value="{{imgUrl}}">
+
+            <label for="certificate">Certificate of authenticity:</label>
+            <input type="text" id="certificate" name="certificate" value="{{certificate}}">
+            {{/with}}
+            <button class="edit-btn">Edit</button>
+        </form>
+
+    </div>
+</section>
